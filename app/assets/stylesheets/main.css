@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* Software Allies Website*/
+body{ margin:0px; text-align:center; background-color:#FFF; font-family:Verdana, Geneva, sans-serif;}
+.first a{ display: none;}
+.clear{ clear:both;}
+#center{ width:900px; margin-left:auto; margin-right:auto; }
+#logo{ float:left; margin-top:20px; width:169px; height:56px; }
+#menu{ float:left; text-align: left; width:610px; height:90px; }
+#menu a{ color:#000; font-size:11px;}
+#menu li { float: left; border-left: 1px solid #CDD7E0; font-size: 12px; font-weight: bold; list-style: none outside none; text-transform: uppercase; margin-left:5px; padding-left: 5px; }
+h3, h3 a{ color:#EA6480; font-size: 25px; font-weight: bold; }
+#menu ul{ text-align: center; padding:0px; padding-top: 40px; padding-left: 15px;}
+#social{ float:left; margin-top:20px; width:114px; height:50px;} 
+#social b{ color: #4467A6; font-size: 13px;}
+#slideshow{ width:900px; height:300px;  overflow: hidden;} 
+#slideshow_shadow{ height: 50px; width: 902px; }
+#content{ text-align:left; font-size:12px;}
+#side_panel{ float:left; width:252px;}
+#side_panel .module{background-color: #1A86C8; padding-top: 40px; background-image:url('/assets/start.png'); background-repeat:no-repeat; }
+#side_panel .module img{ margin: 10px;}
+#side_panel_bottom{width:252px; height: 10px; background-image:url('/assets/bottom-curve.png'); background-repeat:no-repeat;}
+#right_content{ float:left; margin-left:10px; width:630px;}
+#platforms { text-align:left; height: 88px; margin-top: 30px; border: 1px solid #999999;}
+#footer{ margin-top:20px; border-bottom: 1px #999999 solid; padding-bottom: 20px; }
+#footer a{ font-weight:bold; text-decoration:none; color:#000000;}
+#footer a:hover{ text-decoration:underline;}
+.title_footer{ color:#648fa9; font-size:14px; font-weight:bold; }
+.liner {border-right: 1px #999999 solid;}
+.footer_column{font-size:10px; text-align:left; float:left; height: 90px; padding: 0 20px;}
+.footer_leyend{ font-size:10px; padding-top:30px; }
+#copy {float:right;}
+#addy{float:left; text-align:left;}
+#side_panel .module li a{ text-decoration: none; color: #FFF; }
+#side_panel  li {list-style-type:none; margin-left:-40px; border-top:1px solid #7ab9df; border-bottom: 1px solid #084c8b;}
+#side_panel  li a {color:#FFF; display: block; padding: 10px 0; font-weight: bold;  padding-left: 20px; }
+#side_panel  li a:hover { background: #7eb4d7;}
+#side_panel  ul {margin-top: 20px;}
+/*Slideshow*/
+#slideshow IMG { position:absolute; z-index:8; display: block;}
+#slideshow IMG.active { z-index:10; }
+#slideshow IMG.last-active { z-index:9;}
+/*Slideshow*/

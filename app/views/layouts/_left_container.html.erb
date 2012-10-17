@@ -1,0 +1,32 @@
+<div class="clear"></div>
+<div class="module">
+
+<ul>
+  <%
+    if @page.children.present? || @page.slug == "contact-us"
+      parent_page = @page
+    else
+      parent_page = @page.parent
+    end
+  %>
+  <% Refinery::Page.where(parent_id: parent_page.id).each do |menu_item| %>
+    <li> <%= link_to menu_item.title, menu_item %> </li>
+  <% end %>
+</ul>
+	<!-- 
+	<ul>
+		  <%# find_all_children_pages(@page).each do |page| %>
+		  	<%# if page.id != 2 %>
+		    	<li><%#= link_to page.translation_for(I18n.locale).title, page.link_url %>
+		    <%# end %>
+		  <%# end %>
+		</ul>      -->
+
+
+		<%=link_to image_tag('left_container/force.png'), "/contact-us" %>
+		<%=link_to image_tag('left_container/rails.png'), "/contact-us" %>
+		<%=link_to image_tag('left_container/call.png'), "/contact-us" %>
+
+		<%#= image_tag("left_container/bottom-curve.png", :alt => "bottom curve", :width => "252" , :height => "10") %>
+</div>
+<div class="clear"></div>
