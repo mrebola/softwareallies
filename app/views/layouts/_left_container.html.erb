@@ -9,12 +9,14 @@
 	      parent_page = @page.parent
 	    end
 	  %>
-
-	<% if @page.children.present? %>
+	 <% unless @page.slug == "contact-us" || @page.slug == "customers" || @page.slug == "home" %>
 	  <% Refinery::Page.where(parent_id: parent_page.id).each do |menu_item| %>
-	    <li> <%= link_to menu_item.title, menu_item %> </li>
+            <% bad_children = ["Page Not Found", "Thank You", "Privacy Policy"] %>
+            <% unless bad_children.include?(menu_item.title) %>
+	      <li> <%= link_to menu_item.title, menu_item %> </li>
+            <% end %>
 	  <% end %>
-	<% end %>	
+          <% end %>
 	</ul>
 
 <%=link_to image_tag('left_container/force.png'), "/contact-us" %>
