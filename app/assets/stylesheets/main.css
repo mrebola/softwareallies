@@ -41,3 +41,10 @@ h3, h3 a{ color:#EA6480; font-size: 25px; font-weight: bold; }
 #slideshow IMG.active { z-index:10; }
 #slideshow IMG.last-active { z-index:9;}
 /*Slideshow*/
+
+.view_more { float: right; color:#EA6480; padding: 4px;}
+
+
+/*FORM* S*/
+
+/*FORM END */

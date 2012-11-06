@@ -1,0 +1,151 @@
+<%#= render '/refinery/content_page' %>
+
+<section id='body_content'>
+  <%=raw @page.content_for(:body) %>
+</section>
+<section id='side_body_content'>
+  <%=raw @page.content_for(:side_body) %>
+</section>
+
+<% if @page.slug == "contact-us" %>    
+<!-- Contact form -->
+<style type="text/css">
+
+.clear{
+padding-top:10px;
+}
+.row{
+  width:463px;
+  height:40px;
+  background-image:url(pages/contact/field_background.jpg);
+  background-repeat:no-repeat;
+  }
+  
+.leftt{
+  float:left;
+  width:200px;
+  }
+.rightt{
+  float:left;
+  width:187px;
+  margin-left:50px;
+  margin-top:13px;
+  }
+.inputs{
+  padding-left:10px;
+  border:none;
+  background:none;
+  width:200px;
+  height:33px;
+  font-size:17px;
+  color:#333;
+  }
+
+#submit_button{
+  background-image:url(pages/contact/submit.jpg);
+  width:137px;
+  height:30px;
+  float: right;
+  margin-right: 170px;
+  }
+#contactus {width: 480px; margin-left: 50px;}
+</style>
+
+<script type="text/javascript">
+function validate_form ( )
+{
+    valid = true;
+	if ( document.contactus.first_name.value == "" )
+    {
+        alert('Required Field');
+	     valid = false;
+		
+    }
+	return valid;
+}
+</script>
+
+
+<form name="contactus" action="http://www.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"  method="POST" onsubmit="return validate_form ( );">
+<input type=hidden name="oid" value="00DA0000000J81c">
+<input type=hidden name="retURL" value="http://www.softwareallies.com/index.php?option=com_content&view=article&id=84&Itemid=84">
+<input type="hidden" id="lead_source"  name="lead_source" value="Website"/>
+<b>Please complete this form for a free consultation</b><br><br>
+	
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="first_name" validation="required email"/>
+	    </div>
+		<div class="rightt">First Name <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="last_name"/>
+	    </div>
+		<div class="rightt">Last Name <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="company"/>
+	    </div>
+		<div class="rightt">Company <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="title"/>
+	    </div>
+		<div class="rightt">Title <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="phone"/>
+	    </div>
+		<div class="rightt">Phone <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="email"/>
+	    </div>
+		<div class="rightt">Email <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="city"/>
+	    </div>
+		<div class="rightt">City <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="state"/>
+	    </div>
+		<div class="rightt">State/Province <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+	<div class="row">
+		<div class="leftt">
+	    <input type="text" class="inputs" name="Project_Comments__c"/>
+	    </div>
+		<div class="rightt">Project Comments <span style="color:#F00">*</span></div>
+	</div>
+	<div class="clear"></div>
+
+  Required Fields <font color="#FF0000">*</font>
+<input type="submit" name="submit"  id="submit_button" value="Contact Us"/>
+</form>
+<!-- Contact form -->
+<% end %>

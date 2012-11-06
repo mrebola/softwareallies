@@ -9,7 +9,7 @@
 	      parent_page = @page.parent
 	    end
 	  %>
-	 <% unless @page.slug == "contact-us" || @page.slug == "customers" || @page.slug == "home" %>
+	 <% unless @page.slug == "contact-us" || @page.slug == "customers" || @page.slug == "home" || @page.slug == "partners" %>
 	  <% Refinery::Page.where(parent_id: parent_page.id).each do |menu_item| %>
             <% bad_children = ["Page Not Found", "Thank You", "Privacy Policy"] %>
             <% unless bad_children.include?(menu_item.title) %>
